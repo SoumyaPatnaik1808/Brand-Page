@@ -9,6 +9,7 @@
             color: #2c2c2c;
             
         }
+        
         * {
             margin: 0;
             padding: 0;
@@ -21,6 +22,8 @@
             overflow-x: hidden;
             background: #fafafa;
         }
+        .reveal {opacity:0;transform:translateY(30px);transition:.8s}
+.reveal.show {opacity:1;transform:translateY(0)}
 
         header {
             position: fixed;
@@ -342,6 +345,11 @@ function toggleMenu() {
   document.getElementById('navMenu').classList.toggle('active');
 }
     </script>
+    <script>
+onscroll=()=>document.querySelectorAll('.reveal').forEach(e=>{
+  e.getBoundingClientRect().top<innerHeight-100&&e.classList.add('show');
+});
+</script>
 
     <section class="hero" id="home">
         <div class="hero-content">
