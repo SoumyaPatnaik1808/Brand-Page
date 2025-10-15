@@ -163,6 +163,35 @@
             max-width: 1400px;
             margin: 0 auto;
         }
+        .newsletter {
+  margin-top: 2rem;
+}
+.newsletter-form {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.newsletter-form input {
+  padding: 0.8rem;
+  width: 250px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+.newsletter-form button {
+  padding: 0.8rem 1.5rem;
+  background: #a88860;
+  border: none;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+.newsletter-form button:hover {
+  background: #2c2c2c;
+}
 
         .collection-card {
             position: relative;
@@ -419,6 +448,14 @@ function toggleMenu() {
         <div class="copyright">
             © 2025 MERAKI. All rights reserved.
         </div>
+        <div class="newsletter reveal">
+  <h4>Stay Connected</h4>
+  <p>Subscribe for updates & new arrivals</p>
+  <form class="newsletter-form">
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
     </footer>
 </body>
 </html>
