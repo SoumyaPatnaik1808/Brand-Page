@@ -21,6 +21,15 @@
             overflow-x: hidden;
             background: #fafafa;
         }
+        .reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
         header {
             position: fixed;
@@ -342,6 +351,15 @@ function toggleMenu() {
   document.getElementById('navMenu').classList.toggle('active');
 }
     </script>
+    <script>
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.reveal').forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) el.classList.add('active');
+  });
+});
+    </script>
+    
 
     <section class="hero" id="home">
         <div class="hero-content">
@@ -353,6 +371,9 @@ function toggleMenu() {
     <div class="menu-toggle" onclick="toggleMenu()">
   <span></span><span></span><span></span>
     </div>
+    <section class="collections reveal" id="collections">
+<section class="about reveal" id="about">
+<footer id="contact" class="reveal">
 
     <section class="collections" id="collections">
         <h2 class="section-title">Our Collections</h2>
