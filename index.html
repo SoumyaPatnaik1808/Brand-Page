@@ -72,9 +72,6 @@
         nav a:hover {
             color: #a88860;
         }
-       h1:hover {
-            transform: translateY(-20px);
-        }
 
         .hero {
             height: 100vh;
@@ -418,31 +415,30 @@ onscroll=()=>document.querySelectorAll('.reveal').forEach(e=>{
             <a href="#collections" class="cta-btn">EXPLORE COLLECTION</a>
         </div>
     </section>
-    <div class="menu-toggle" onclick="toggleMenu()">
-  <span></span><span></span><span></span>
-    </div>
 
     <section class="collections" id="collections">
         <h2 class="section-title">Our Collections</h2>
         <div class="collection-grid">
-            <div class="collection-card">
-                <div class="collection-info">
-                    <h3>AUTUMN ESSENCE</h3>
-                    <p>Warm hues for cooler days</p>
-                </div>
-            </div>
-            <div class="collection-card">
-                <div class="collection-info">
-                    <h3>MINIMALIST GRACE</h3>
-                    <p>Timeless simplicity</p>
-                </div>
-            </div>
-            <div class="collection-card">
-                <div class="collection-info">
-                    <h3>EVENING ELEGANCE</h3>
-                    <p>Sophisticated nights</p>
-                </div>
-            </div>
+          <div class="collection-card" style="background-image:url('autumn.jpg');">
+  <div class="collection-info">
+    <h3>AUTUMN ESSENCE</h3>
+    <p>Warm hues for cooler days</p>
+  </div>
+</div>
+
+<div class="collection-card" style="background-image:url('minimalist.jpg');">
+  <div class="collection-info">
+    <h3>MINIMALIST GRACE</h3>
+    <p>Timeless simplicity</p>
+  </div>
+</div>
+
+<div class="collection-card" style="background-image:url('evening.jpg');">
+  <div class="collection-info">
+    <h3>EVENING ELEGANCE</h3>
+    <p>Sophisticated nights</p>
+  </div>
+</div>
         </div>
     </section>
 
