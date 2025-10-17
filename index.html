@@ -355,6 +355,27 @@
             .collection-grid {
                 grid-template-columns: 1fr;
             }
+            #darkToggle {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #2c2c2c;
+}
+body.dark {
+  background: #111;
+  color: #f1f1f1;
+}
+body.dark header {
+  background: rgba(34,34,34,0.95);
+}
+body.dark nav a {
+  color: #f1f1f1;
+}
+body.dark .cta-btn {
+  background: #f1f1f1;
+  color: #111;
+}
 
             .about {
                 flex-direction: column;
@@ -370,6 +391,7 @@
 </head>
 <body>
     <header>
+        <button id="darkToggle" title="Toggle Dark Mode">☾</button>
         <div class="logo">MERAKI</div>
         <nav>
             <a href="#home">HOME</a>
