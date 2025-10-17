@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MERAKI - Crafted with Soul, Worn with Grace</title>
     <style>
+        h2 {
+            color: #2c2c2c;
+            
+        }
+        .hero-content {
+  position: relative;
+}
+.hero-content::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1), transparent 70%);
+  pointer-events: none;
+}
         * {
             margin: 0;
             padding: 0;
@@ -17,6 +31,8 @@
             overflow-x: hidden;
             background: #fafafa;
         }
+        .reveal {opacity:0;transform:translateY(30px);transition:.8s}
+.reveal.show {opacity:1;transform:translateY(0)}
 
         header {
             position: fixed;
@@ -156,6 +172,35 @@
             max-width: 1400px;
             margin: 0 auto;
         }
+        .newsletter {
+  margin-top: 2rem;
+}
+.newsletter-form {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.newsletter-form input {
+  padding: 0.8rem;
+  width: 250px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+.newsletter-form button {
+  padding: 0.8rem 1.5rem;
+  background: #a88860;
+  border: none;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+.newsletter-form button:hover {
+  background: #2c2c2c;
+}
 
         .collection-card {
             position: relative;
@@ -307,6 +352,27 @@
             .collection-grid {
                 grid-template-columns: 1fr;
             }
+            #darkToggle {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #2c2c2c;
+}
+body.dark {
+  background: #111;
+  color: #f1f1f1;
+}
+body.dark header {
+  background: rgba(34,34,34,0.95);
+}
+body.dark nav a {
+  color: #f1f1f1;
+}
+body.dark .cta-btn {
+  background: #f1f1f1;
+  color: #111;
+}
 
             .about {
                 flex-direction: column;
@@ -322,6 +388,7 @@
 </head>
 <body>
     <header>
+        <button id="darkToggle" title="Toggle Dark Mode">☾</button>
         <div class="logo">MERAKI</div>
         <nav>
             <a href="#home">HOME</a>
@@ -330,6 +397,16 @@
             <a href="#contact">CONTACT</a>
         </nav>
     </header>
+    <script>
+function toggleMenu() {
+  document.getElementById('navMenu').classList.toggle('active');
+}
+    </script>
+    <script>
+onscroll=()=>document.querySelectorAll('.reveal').forEach(e=>{
+  e.getBoundingClientRect().top<innerHeight-100&&e.classList.add('show');
+});
+</script>
 
     <section class="hero" id="home">
         <div class="hero-content">
@@ -406,6 +483,14 @@
         <div class="copyright">
             © 2025 MERAKI. All rights reserved.
         </div>
+        <div class="newsletter reveal">
+  <h4>Stay Connected</h4>
+  <p>Subscribe for updates & new arrivals</p>
+  <form class="newsletter-form">
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
     </footer>
 </body>
 </html>
